@@ -9,6 +9,7 @@
 #import "SettingsViewController.h"
 #import "FavoriteTableViewCell.h"
 #import "OptionViewController.h"
+#import "DataController.h"
 #import "AppDelegate.h"
 #import "Utils.h"
 
@@ -16,6 +17,7 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *optionButton;
 @property (strong, nonatomic) NSMutableArray *favourites;
+@property (strong, nonatomic) NSArray *currencies;
 
 @end
 
@@ -23,8 +25,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.favourites = [Utils getFavourites];
-    NSLog(@"%@", self.favourites);
+    
+    self.currencies = [DataController fetchCurrencies];
+    self.favourites = [[Utils getFavourites] mutableCopy];
+    
     [self setups];
     
     if ([Utils getMainCurrency].name) {
@@ -79,7 +83,7 @@
         Currency *currency = self.currencies[indexPath.row];
         cell.currencyName.text = currency.name;
         
-        cell.accessoryType = [self.favourites containsObject:currency] ? UITableViewCellAccessoryCheckmark : UITableViewCellAccessoryNone;
+        cell.accessoryType = [[self.favourites valueForKeyPath:@"name"] containsObject:currency.name] ? UITableViewCellAccessoryCheckmark : UITableViewCellAccessoryNone;
     }
     
     return cell;
@@ -94,10 +98,19 @@
         [self.favourites addObject:currency];
     } else {
         [cell setAccessoryType:UITableViewCellAccessoryNone];
-        [self.favourites removeObject:currency];
+        [self deleteFavourite:currency];
     }
     
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
+}
+
+- (void)deleteFavourite:(Currency *)currency {
+    for (Currency *c in self.favourites) {
+        if ([c.name isEqualToString:currency.name]) {
+            [self.favourites removeObject:c];
+            return;
+        }
+    }
 }
 
 @end

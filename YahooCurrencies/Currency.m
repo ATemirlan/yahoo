@@ -32,7 +32,25 @@
     } else {
         return nil;
     }
+}
 
+#pragma mark - NSCoding
+
+- (id)initWithCoder:(NSCoder *)decoder {
+    self = [super init];
+    if (!self) {
+        return nil;
+    }
+    
+    self.name = [decoder decodeObjectForKey:@"name"];
+    self.price = [[decoder decodeObjectForKey:@"price"] doubleValue];
+    
+    return self;
+}
+
+- (void)encodeWithCoder:(NSCoder *)encoder {
+    [encoder encodeObject:self.name forKey:@"name"];
+    [encoder encodeObject:[NSNumber numberWithDouble:self.price] forKey:@"price"];
 }
 
 @end

@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Currency : NSObject
+@interface Currency : NSObject <NSCoding>
 
 @property (nonatomic) double price;
 @property (strong, nonatomic) NSString *name;

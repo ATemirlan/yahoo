@@ -10,6 +10,4 @@
 
 @interface SettingsViewController : UIViewController
 
-@property (strong, nonatomic) NSArray *currencies;
-
 @end

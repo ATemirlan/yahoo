@@ -15,6 +15,7 @@
 @interface ViewController ()
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+
 @property (strong, nonatomic) NSArray *currencies;
 
 @end
@@ -26,15 +27,31 @@
     [self setups];
 }
 
+- (void)fetchCurrenciesWithCompletion:(void (^)(UIBackgroundFetchResult))completion {
+    [[RequestEngine shared] getCurrenciesWithCompletion:^(NSArray *currencies, NSString *error) {
+        if (currencies.count > 0) {
+            completion(UIBackgroundFetchResultNewData);
+            NSLog(@"new data");
+        }
+    }];
+}
+
 - (void)setups {
     self.title = [Utils getMainCurrency].name;
-
-    if (![DataController isEmpty]) {
-        self.currencies = [DataController fetchCurrencies];
-        [self.tableView reloadData];
+    
+    self.currencies = [Utils getFavourites];
+    
+    if (self.currencies.count == 0) {
+        if (![DataController isEmpty]) {
+            self.currencies = [DataController fetchCurrencies];
+            [self.tableView reloadData];
+        } else {
+            [self getCurrencies];
+        }
     } else {
-        [self getCurrencies];
+        [self.tableView reloadData];
     }
+    
 }
 
 - (void)getCurrencies {
@@ -50,13 +67,6 @@
     [self performSegueWithIdentifier:@"editSegue" sender:self.currencies];
 }
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([segue.identifier isEqualToString:@"editSegue"]) {
-        SettingsViewController *vc = [segue destinationViewController];
-        vc.currencies = self.currencies;
-    }
-}
-
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -70,7 +80,7 @@
     
     if (!cell) cell = [[CurrencyTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
     
-    if (self.currencies[indexPath.row]) {
+    if (indexPath.row <= self.currencies.count) {
         Currency *currency = self.currencies[indexPath.row];
         
         cell.nameLabel.text = currency.name;

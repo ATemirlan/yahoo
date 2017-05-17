@@ -33,16 +33,20 @@ static NSString * const favouriteCurrencies = @"FAVOURITES";
     return price;
 }
 
-
 + (void)saveFavourites:(NSArray *)favourites {
-    [[NSUserDefaults standardUserDefaults] setObject:favourites forKey:favouriteCurrencies];
+    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:favourites];
+    [[NSUserDefaults standardUserDefaults] setObject:data forKey:favouriteCurrencies];
 }
 
 + (NSMutableArray *)getFavourites {
     if (![[NSUserDefaults standardUserDefaults] objectForKey:favouriteCurrencies]) {
         return [NSMutableArray array];
     }
-    return [[NSUserDefaults standardUserDefaults] objectForKey:favouriteCurrencies];
+    
+    NSData *data = [[NSUserDefaults standardUserDefaults] objectForKey:favouriteCurrencies];
+    NSMutableArray *favourites = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+
+    return favourites;
 }
 
 @end

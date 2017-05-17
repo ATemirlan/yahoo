@@ -24,22 +24,27 @@ static NSString * const APIUrl = @"http://finance.yahoo.com/webservice/v1/symbol
 }
 
 - (void)getCurrenciesWithCompletion:(ObjectBlock)completion {
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+
     [[AFHTTPSessionManager manager] GET:APIUrl parameters:NULL progress:NULL success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSArray *resultArray = responseObject[@"list"][@"resources"];
         NSMutableArray *currencies = [NSMutableArray array];
+        NSArray *currs = @[@"KZT", @"RUB", @"KGS", @"EUR", @"GBP"];
         
         for (NSDictionary *d in resultArray) {
             Currency *currency = [Currency initWithData:d];
             
-            if (currency) {
+            if (currency && [currs containsObject:currency.name]) {
                 [currencies addObject:currency];
             }
         }
         
         [DataController saveToCoreData:currencies];
-
+        
+        [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
         completion(currencies, nil);
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
         completion(nil, error.localizedDescription);
     }];
 }
