@@ -1,0 +1,506 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5C1F507197436597D554F083 /* libPods-YahooCurrencies.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 27F2367F9705D94632EE0D96 /* libPods-YahooCurrencies.a */; };
+		91ACF03A1ECBEC9E00CD8ABA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 91ACF0391ECBEC9E00CD8ABA /* main.m */; };
+		91ACF03D1ECBEC9E00CD8ABA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 91ACF03C1ECBEC9E00CD8ABA /* AppDelegate.m */; };
+		91ACF0401ECBEC9E00CD8ABA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91ACF03F1ECBEC9E00CD8ABA /* ViewController.m */; };
+		91ACF0431ECBEC9F00CD8ABA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91ACF0411ECBEC9F00CD8ABA /* Main.storyboard */; };
+		91ACF0461ECBEC9F00CD8ABA /* YahooCurrencies.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 91ACF0441ECBEC9F00CD8ABA /* YahooCurrencies.xcdatamodeld */; };
+		91ACF0481ECBEC9F00CD8ABA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91ACF0471ECBEC9F00CD8ABA /* Assets.xcassets */; };
+		91ACF04B1ECBEC9F00CD8ABA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91ACF0491ECBEC9F00CD8ABA /* LaunchScreen.storyboard */; };
+		91ACF0541ECBEDB600CD8ABA /* RequestEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 91ACF0531ECBEDB600CD8ABA /* RequestEngine.m */; };
+		91ACF0571ECBEF7800CD8ABA /* Currency.m in Sources */ = {isa = PBXBuildFile; fileRef = 91ACF0561ECBEF7800CD8ABA /* Currency.m */; };
+		91E4BA731ECBFBDF007DDAB1 /* CurrencyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 91E4BA721ECBFBDF007DDAB1 /* CurrencyTableViewCell.m */; };
+		91E4BA791ECC0677007DDAB1 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91E4BA781ECC0677007DDAB1 /* SettingsViewController.m */; };
+		91E4BA7C1ECC0833007DDAB1 /* OptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91E4BA7B1ECC0833007DDAB1 /* OptionViewController.m */; };
+		91E4BA8E1ECC1008007DDAB1 /* CurrencyEntity+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 91E4BA8B1ECC1008007DDAB1 /* CurrencyEntity+CoreDataClass.m */; };
+		91E4BA8F1ECC1008007DDAB1 /* CurrencyEntity+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 91E4BA8D1ECC1008007DDAB1 /* CurrencyEntity+CoreDataProperties.m */; };
+		91E4BA921ECC46B1007DDAB1 /* DataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91E4BA911ECC46B1007DDAB1 /* DataController.m */; };
+		91E4BA951ECC4E07007DDAB1 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 91E4BA941ECC4E07007DDAB1 /* Utils.m */; };
+		91E4BA981ECC682A007DDAB1 /* FavoriteTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 91E4BA971ECC682A007DDAB1 /* FavoriteTableViewCell.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		27F2367F9705D94632EE0D96 /* libPods-YahooCurrencies.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YahooCurrencies.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6EDA6F2A9722664A02943188 /* Pods-YahooCurrencies.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YahooCurrencies.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YahooCurrencies/Pods-YahooCurrencies.debug.xcconfig"; sourceTree = "<group>"; };
+		7635654B7C2ADFD6A604BB56 /* Pods-YahooCurrencies.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YahooCurrencies.release.xcconfig"; path = "Pods/Target Support Files/Pods-YahooCurrencies/Pods-YahooCurrencies.release.xcconfig"; sourceTree = "<group>"; };
+		91ACF0351ECBEC9E00CD8ABA /* YahooCurrencies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YahooCurrencies.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		91ACF0391ECBEC9E00CD8ABA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		91ACF03B1ECBEC9E00CD8ABA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		91ACF03C1ECBEC9E00CD8ABA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		91ACF03E1ECBEC9E00CD8ABA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		91ACF03F1ECBEC9E00CD8ABA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		91ACF0421ECBEC9F00CD8ABA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		91ACF0451ECBEC9F00CD8ABA /* YahooCurrencies.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = YahooCurrencies.xcdatamodel; sourceTree = "<group>"; };
+		91ACF0471ECBEC9F00CD8ABA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		91ACF04A1ECBEC9F00CD8ABA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		91ACF04C1ECBEC9F00CD8ABA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		91ACF0521ECBEDB600CD8ABA /* RequestEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestEngine.h; sourceTree = "<group>"; };
+		91ACF0531ECBEDB600CD8ABA /* RequestEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestEngine.m; sourceTree = "<group>"; };
+		91ACF0551ECBEF7800CD8ABA /* Currency.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Currency.h; sourceTree = "<group>"; };
+		91ACF0561ECBEF7800CD8ABA /* Currency.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Currency.m; sourceTree = "<group>"; };
+		91E4BA711ECBFBDF007DDAB1 /* CurrencyTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrencyTableViewCell.h; sourceTree = "<group>"; };
+		91E4BA721ECBFBDF007DDAB1 /* CurrencyTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrencyTableViewCell.m; sourceTree = "<group>"; };
+		91E4BA771ECC0677007DDAB1 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		91E4BA781ECC0677007DDAB1 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		91E4BA7A1ECC0833007DDAB1 /* OptionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OptionViewController.h; sourceTree = "<group>"; };
+		91E4BA7B1ECC0833007DDAB1 /* OptionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OptionViewController.m; sourceTree = "<group>"; };
+		91E4BA8A1ECC1008007DDAB1 /* CurrencyEntity+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CurrencyEntity+CoreDataClass.h"; sourceTree = "<group>"; };
+		91E4BA8B1ECC1008007DDAB1 /* CurrencyEntity+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CurrencyEntity+CoreDataClass.m"; sourceTree = "<group>"; };
+		91E4BA8C1ECC1008007DDAB1 /* CurrencyEntity+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CurrencyEntity+CoreDataProperties.h"; sourceTree = "<group>"; };
+		91E4BA8D1ECC1008007DDAB1 /* CurrencyEntity+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CurrencyEntity+CoreDataProperties.m"; sourceTree = "<group>"; };
+		91E4BA901ECC46B1007DDAB1 /* DataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataController.h; sourceTree = "<group>"; };
+		91E4BA911ECC46B1007DDAB1 /* DataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataController.m; sourceTree = "<group>"; };
+		91E4BA931ECC4E07007DDAB1 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
+		91E4BA941ECC4E07007DDAB1 /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
+		91E4BA961ECC682A007DDAB1 /* FavoriteTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoriteTableViewCell.h; sourceTree = "<group>"; };
+		91E4BA971ECC682A007DDAB1 /* FavoriteTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoriteTableViewCell.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		91ACF0321ECBEC9E00CD8ABA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C1F507197436597D554F083 /* libPods-YahooCurrencies.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		01AA2FACD3B7CF3B16E45007 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				27F2367F9705D94632EE0D96 /* libPods-YahooCurrencies.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		245DBD70A6B83A95A13C63B6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6EDA6F2A9722664A02943188 /* Pods-YahooCurrencies.debug.xcconfig */,
+				7635654B7C2ADFD6A604BB56 /* Pods-YahooCurrencies.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		91ACF02C1ECBEC9E00CD8ABA = {
+			isa = PBXGroup;
+			children = (
+				91ACF0371ECBEC9E00CD8ABA /* YahooCurrencies */,
+				91ACF0361ECBEC9E00CD8ABA /* Products */,
+				245DBD70A6B83A95A13C63B6 /* Pods */,
+				01AA2FACD3B7CF3B16E45007 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		91ACF0361ECBEC9E00CD8ABA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				91ACF0351ECBEC9E00CD8ABA /* YahooCurrencies.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		91ACF0371ECBEC9E00CD8ABA /* YahooCurrencies */ = {
+			isa = PBXGroup;
+			children = (
+				91E4BA741ECC0267007DDAB1 /* View */,
+				91E4BA751ECC026D007DDAB1 /* Model */,
+				91E4BA761ECC0274007DDAB1 /* Controller */,
+				91ACF0381ECBEC9E00CD8ABA /* Supporting Files */,
+			);
+			path = YahooCurrencies;
+			sourceTree = "<group>";
+		};
+		91ACF0381ECBEC9E00CD8ABA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				91ACF03B1ECBEC9E00CD8ABA /* AppDelegate.h */,
+				91ACF03C1ECBEC9E00CD8ABA /* AppDelegate.m */,
+				91ACF0411ECBEC9F00CD8ABA /* Main.storyboard */,
+				91ACF0441ECBEC9F00CD8ABA /* YahooCurrencies.xcdatamodeld */,
+				91ACF0471ECBEC9F00CD8ABA /* Assets.xcassets */,
+				91ACF0491ECBEC9F00CD8ABA /* LaunchScreen.storyboard */,
+				91ACF04C1ECBEC9F00CD8ABA /* Info.plist */,
+				91ACF0391ECBEC9E00CD8ABA /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		91E4BA741ECC0267007DDAB1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				91E4BA711ECBFBDF007DDAB1 /* CurrencyTableViewCell.h */,
+				91E4BA721ECBFBDF007DDAB1 /* CurrencyTableViewCell.m */,
+				91E4BA961ECC682A007DDAB1 /* FavoriteTableViewCell.h */,
+				91E4BA971ECC682A007DDAB1 /* FavoriteTableViewCell.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		91E4BA751ECC026D007DDAB1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				91ACF0521ECBEDB600CD8ABA /* RequestEngine.h */,
+				91ACF0531ECBEDB600CD8ABA /* RequestEngine.m */,
+				91ACF0551ECBEF7800CD8ABA /* Currency.h */,
+				91ACF0561ECBEF7800CD8ABA /* Currency.m */,
+				91E4BA931ECC4E07007DDAB1 /* Utils.h */,
+				91E4BA941ECC4E07007DDAB1 /* Utils.m */,
+				91E4BA831ECC0EEB007DDAB1 /* CoreData */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		91E4BA761ECC0274007DDAB1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				91ACF03E1ECBEC9E00CD8ABA /* ViewController.h */,
+				91ACF03F1ECBEC9E00CD8ABA /* ViewController.m */,
+				91E4BA771ECC0677007DDAB1 /* SettingsViewController.h */,
+				91E4BA781ECC0677007DDAB1 /* SettingsViewController.m */,
+				91E4BA7A1ECC0833007DDAB1 /* OptionViewController.h */,
+				91E4BA7B1ECC0833007DDAB1 /* OptionViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		91E4BA831ECC0EEB007DDAB1 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				91E4BA901ECC46B1007DDAB1 /* DataController.h */,
+				91E4BA911ECC46B1007DDAB1 /* DataController.m */,
+				91E4BA8A1ECC1008007DDAB1 /* CurrencyEntity+CoreDataClass.h */,
+				91E4BA8B1ECC1008007DDAB1 /* CurrencyEntity+CoreDataClass.m */,
+				91E4BA8C1ECC1008007DDAB1 /* CurrencyEntity+CoreDataProperties.h */,
+				91E4BA8D1ECC1008007DDAB1 /* CurrencyEntity+CoreDataProperties.m */,
+			);
+			name = CoreData;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		91ACF0341ECBEC9E00CD8ABA /* YahooCurrencies */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 91ACF04F1ECBEC9F00CD8ABA /* Build configuration list for PBXNativeTarget "YahooCurrencies" */;
+			buildPhases = (
+				11EEA58053B677938883DF77 /* [CP] Check Pods Manifest.lock */,
+				91ACF0311ECBEC9E00CD8ABA /* Sources */,
+				91ACF0321ECBEC9E00CD8ABA /* Frameworks */,
+				91ACF0331ECBEC9E00CD8ABA /* Resources */,
+				9BFDDDD5023899B97257EA58 /* [CP] Embed Pods Frameworks */,
+				89F703748951047E6864E9E0 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = YahooCurrencies;
+			productName = YahooCurrencies;
+			productReference = 91ACF0351ECBEC9E00CD8ABA /* YahooCurrencies.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		91ACF02D1ECBEC9E00CD8ABA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = TemirlanAlpysbayev;
+				TargetAttributes = {
+					91ACF0341ECBEC9E00CD8ABA = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = S9TF7DAU5J;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 91ACF0301ECBEC9E00CD8ABA /* Build configuration list for PBXProject "YahooCurrencies" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 91ACF02C1ECBEC9E00CD8ABA;
+			productRefGroup = 91ACF0361ECBEC9E00CD8ABA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				91ACF0341ECBEC9E00CD8ABA /* YahooCurrencies */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		91ACF0331ECBEC9E00CD8ABA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				91ACF04B1ECBEC9F00CD8ABA /* LaunchScreen.storyboard in Resources */,
+				91ACF0481ECBEC9F00CD8ABA /* Assets.xcassets in Resources */,
+				91ACF0431ECBEC9F00CD8ABA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		11EEA58053B677938883DF77 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		89F703748951047E6864E9E0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YahooCurrencies/Pods-YahooCurrencies-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9BFDDDD5023899B97257EA58 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YahooCurrencies/Pods-YahooCurrencies-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		91ACF0311ECBEC9E00CD8ABA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				91ACF0401ECBEC9E00CD8ABA /* ViewController.m in Sources */,
+				91ACF03D1ECBEC9E00CD8ABA /* AppDelegate.m in Sources */,
+				91ACF0571ECBEF7800CD8ABA /* Currency.m in Sources */,
+				91E4BA951ECC4E07007DDAB1 /* Utils.m in Sources */,
+				91E4BA7C1ECC0833007DDAB1 /* OptionViewController.m in Sources */,
+				91E4BA791ECC0677007DDAB1 /* SettingsViewController.m in Sources */,
+				91E4BA921ECC46B1007DDAB1 /* DataController.m in Sources */,
+				91ACF03A1ECBEC9E00CD8ABA /* main.m in Sources */,
+				91ACF0461ECBEC9F00CD8ABA /* YahooCurrencies.xcdatamodeld in Sources */,
+				91E4BA981ECC682A007DDAB1 /* FavoriteTableViewCell.m in Sources */,
+				91E4BA8E1ECC1008007DDAB1 /* CurrencyEntity+CoreDataClass.m in Sources */,
+				91E4BA8F1ECC1008007DDAB1 /* CurrencyEntity+CoreDataProperties.m in Sources */,
+				91ACF0541ECBEDB600CD8ABA /* RequestEngine.m in Sources */,
+				91E4BA731ECBFBDF007DDAB1 /* CurrencyTableViewCell.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		91ACF0411ECBEC9F00CD8ABA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				91ACF0421ECBEC9F00CD8ABA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		91ACF0491ECBEC9F00CD8ABA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				91ACF04A1ECBEC9F00CD8ABA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		91ACF04D1ECBEC9F00CD8ABA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		91ACF04E1ECBEC9F00CD8ABA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		91ACF0501ECBEC9F00CD8ABA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6EDA6F2A9722664A02943188 /* Pods-YahooCurrencies.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = S9TF7DAU5J;
+				INFOPLIST_FILE = YahooCurrencies/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = temir.test.YahooCurrencies;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		91ACF0511ECBEC9F00CD8ABA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7635654B7C2ADFD6A604BB56 /* Pods-YahooCurrencies.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = S9TF7DAU5J;
+				INFOPLIST_FILE = YahooCurrencies/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = temir.test.YahooCurrencies;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		91ACF0301ECBEC9E00CD8ABA /* Build configuration list for PBXProject "YahooCurrencies" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				91ACF04D1ECBEC9F00CD8ABA /* Debug */,
+				91ACF04E1ECBEC9F00CD8ABA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		91ACF04F1ECBEC9F00CD8ABA /* Build configuration list for PBXNativeTarget "YahooCurrencies" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				91ACF0501ECBEC9F00CD8ABA /* Debug */,
+				91ACF0511ECBEC9F00CD8ABA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		91ACF0441ECBEC9F00CD8ABA /* YahooCurrencies.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				91ACF0451ECBEC9F00CD8ABA /* YahooCurrencies.xcdatamodel */,
+			);
+			currentVersion = 91ACF0451ECBEC9F00CD8ABA /* YahooCurrencies.xcdatamodel */;
+			path = YahooCurrencies.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 91ACF02D1ECBEC9E00CD8ABA /* Project object */;
+}
