@@ -29,12 +29,11 @@ static NSString * const APIUrl = @"http://finance.yahoo.com/webservice/v1/symbol
     [[AFHTTPSessionManager manager] GET:APIUrl parameters:NULL progress:NULL success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSArray *resultArray = responseObject[@"list"][@"resources"];
         NSMutableArray *currencies = [NSMutableArray array];
-        NSArray *currs = @[@"KZT", @"RUB", @"KGS", @"EUR", @"GBP"];
         
         for (NSDictionary *d in resultArray) {
             Currency *currency = [Currency initWithData:d];
             
-            if (currency && [currs containsObject:currency.name]) {
+            if (currency) {
                 [currencies addObject:currency];
             }
         }
